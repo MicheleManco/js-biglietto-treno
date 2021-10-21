@@ -8,8 +8,19 @@
 let element = document.getElementById("prezzofinale");
 
 // chiedere l'età e i km da percorrere 
-let age = prompt("Quanti anni hai?");
-let km = prompt("quanti km vuoi percorrere");
+let age =parseInt(prompt("Quanti anni hai?"));
+if (isNaN(age)) {
+    do {
+        age = parseInt(prompt("inserisci il numero di anni che hai"));
+    } while (isNaN(age));
+}
+
+let km = parseInt(prompt("quanti km vuoi percorrere"));
+if (isNaN(km)) {
+    do {
+        km = parseInt(prompt("inserisci il numero dei km che vuoi percorrere"));
+    } while (isNaN(km));
+}
 
 // capire il prezzo base del biglietto in base ai km (0.21€ al km )
 let ticket = km * 0.21 ;
