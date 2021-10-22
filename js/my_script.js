@@ -39,6 +39,7 @@ if (age < 18){
     ticket = ticket- discount2
 }
 
+// output del prezzo dell'elemento 
 element.innerHTML = `Il prezzo è di: ${ticket.toFixed(2)} €`;
 
 
